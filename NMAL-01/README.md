@@ -1,9 +1,9 @@
 ## Task Code: NMAL-01  
 ### Topic: Improved Range Selection in the Bisection Method
 
-#### 1. What could be the better approach to choose the range in the bisection method?
+#### What could be the better approach to choose the range in the bisection method?
 
-In the bisection method, the accuracy and efficiency of root-finding depend significantly on the initial interval \([a, b]\), where the function \( f(x) \) is continuous and satisfies the condition \( f(a) \cdot f(b) < 0 \). This ensures that a root exists within the interval, based on the Intermediate Value Theorem.
+In the bisection method, the accuracy and efficiency of root-finding depend significantly on the initial interval \([a, b]\), where the function \( f(x) \) is continuous and satisfies the condition f(a) . f(b) < 0 \. This ensures that a root exists within the interval, based on the Intermediate Value Theorem.
 
 A better approach to selecting this range includes:
 
@@ -21,7 +21,7 @@ A better approach to selecting this range includes:
   }
 This loop checks consecutive points within a specified domain to identify a sign change, automatically determining a suitable interval.
 
-Optional: Graphical Analysis
+Graphical Analysis:
 When feasible, plotting 𝑓(𝑥) over a wide range can visually reveal intervals where the function crosses the x-axis, helping to choose appropriate bounds.
 
 This technique enhances the reliability of the bisection method and is particularly useful when the root's location is not known in advance.

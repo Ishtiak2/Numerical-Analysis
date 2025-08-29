@@ -1,5 +1,6 @@
-#include <iostream>
-#include <cmath>
+#include <bits/stdc++.h>
+#include <iomanip>
+
 using namespace std;
 
 // Function definition: f(x) = 4x^2 + 3x - 3
@@ -12,6 +13,7 @@ void improvedBisection(double lowerBound, double upperBound, double stepSize, do
     bool found = false;
 
     for (double x = lowerBound; x < upperBound; x += stepSize) {
+        
         if (f(x) * f(x + stepSize) < 0) {
             a = x;
             b = x + stepSize;
@@ -42,15 +44,20 @@ void improvedBisection(double lowerBound, double upperBound, double stepSize, do
             b = c;
         else
             a = c;
+        
+        cout << fixed << setprecision(6);
+        cout <<"a = " <<a <<"   b = " <<b << "  c = " << c << endl;
+
     }
 
+    cout << fixed << setprecision(6);
     cout << "Approximate root: " << c << endl;
     cout << "Iterations: " << iteration << endl;
 }
 
 int main() {
-    double lowerBound = -10;
-    double upperBound = 10;
+    double lowerBound = 0;
+    double upperBound = 1;
     double stepSize = 0.1;
     double tolerance = 1e-6;
 

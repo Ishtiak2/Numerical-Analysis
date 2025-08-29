@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#include <iomanip>
 using namespace std;
 
 // Function: f(x) = 4x^2 + 3x - 3
@@ -31,15 +32,20 @@ void bisection(double a, double b, double tolerance) {
             b = c;
         else
             a = c;
+        
+        cout << fixed << setprecision(6);
+        cout <<"a = " <<a <<"   b = " <<b << "  c = " << c << endl;
+
     }
 
+    cout << fixed << setprecision(6);
     cout << "Approximate root: " << c << endl;
     cout << "Iterations: " << iteration << endl;
 }
 
 int main() {
-    double a = -2;            
-    double b = 0;             
+    double a = 0;            
+    double b = 1;             
     double tolerance = 1e-6;
 
     bisection(a, b, tolerance);

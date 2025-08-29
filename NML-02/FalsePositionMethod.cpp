@@ -2,9 +2,9 @@
 #include <iomanip>
 using namespace std;
 
-// Function: f(x) = 4x^2 + 3x - 3
+// Function: f(x) = ln(3*x) - 3
 double f(double x) {
-    return 4 * x * x + 3 * x - 3;
+    return log(3 * x) - 3;
 }
 
 void regularFalsePosition(double a, double b, double tolerance, int maxIterations = 1000) {
@@ -22,7 +22,7 @@ void regularFalsePosition(double a, double b, double tolerance, int maxIteration
 
     while ((b - a) >= tolerance && iteration < maxIterations) {
         
-        c = (a * f(b) - b * f(a)) / (f(b) - f(a));  // Regula Falsi formula
+        c = (a * f(b) - b * f(a)) / (f(b) - f(a));
         iteration++;
 
         if (f(c) == 0.0) {
@@ -45,9 +45,9 @@ void regularFalsePosition(double a, double b, double tolerance, int maxIteration
 }
 
 int main() {
-    double a = 0;
-    double b = 1;
-    double tolerance = 1e-6;
+    double a = 3;
+    double b = 7;
+    double tolerance = 1e-4;
 
     regularFalsePosition(a, b, tolerance);
 

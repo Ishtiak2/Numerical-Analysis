@@ -1,0 +1,12 @@
+# macOS executables
+*.out
+*.o
+*.exec
+
+# General executables
+a.out
+*.exe
+*.dll
+
+# macOS system files
+.DS_Store

@@ -1,12 +1,14 @@
-# macOS executables
+# Common macOS executables
+a.out
 *.out
 *.o
-*.exec
 
-# General executables
-a.out
-*.exe
-*.dll
+# If you name your program (like 'main', 'program', etc.), ignore them:
+program
+main
 
 # macOS system files
 .DS_Store
+
+# VS Code files
+.vscode/

@@ -20,9 +20,8 @@ int bisection(double a, double b, double tolerance) {
         c = (a + b) / 2;
         iteration++;
 
-        if (f(c) == 0.0) {
-            break; // Exact root found
-        }
+        if (fabs(f(c)) < tolerance)
+            break; // stop if f(c) is very close to 0
 
         if (f(c) * f(a) < 0)
             b = c;
@@ -63,8 +62,8 @@ int improvedBisection(double lowerBound, double upperBound, double stepSize, dou
         c = (a + b) / 2;
         iteration++;
 
-        if (f(c) == 0.0)
-            break;
+        if (fabs(f(c)) < tolerance)
+            break; // stop if f(c) is very close to 0
 
         if (f(c) * f(a) < 0)
             b = c;

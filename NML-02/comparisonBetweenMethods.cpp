@@ -26,9 +26,8 @@ int bisection(double a, double b, double tolerance) {
     
         cout << "c = " << c << ", TPRE = " << truePercentRelativeError <<"%" <<endl;
 
-        if (f(c) == 0.0) {
-            break; // Exact root found
-        }
+        if (fabs(f(c)) < tolerance)
+            break; // stop if f(c) is very close to 0
 
         if (f(c) * f(a) < 0)
             b = c;
@@ -64,9 +63,8 @@ int regularFalsePosition(double a, double b, double tolerance) {
     
         cout << "c = " << c << ", TPRE = " << truePercentRelativeError <<"%" << endl;
 
-        if (f(c) == 0.0) {
-            break; // Exact root found
-        }
+        if (fabs(f(c)) < tolerance)
+            break; // stop if f(c) is very close to 0
 
         if (f(c) * f(a) < 0)
             b = c;

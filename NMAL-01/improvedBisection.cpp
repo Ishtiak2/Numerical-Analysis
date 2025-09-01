@@ -45,12 +45,10 @@ void improvedBisection(double lowerBound, double upperBound, double stepSize, do
         else
             a = c;
         
-        cout << fixed << setprecision(6);
         cout <<"a = " <<a <<"   b = " <<b << "  c = " << c << endl;
 
     }
 
-    cout << fixed << setprecision(6);
     cout << "Approximate root: " << c << endl;
     cout << "Iterations: " << iteration << endl;
 }
@@ -60,6 +58,8 @@ int main() {
     double upperBound = 1;
     double stepSize = 0.1;
     double tolerance = 1e-6;
+
+    cout << fixed << setprecision(6);
 
     improvedBisection(lowerBound, upperBound, stepSize, tolerance);
 

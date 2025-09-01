@@ -7,7 +7,6 @@ double f(double x) {
     return 4 * x * x + 3 * x - 3;
 }
 
-// Traditional Bisection Method
 void bisection(double a, double b, double tolerance) {
     if (f(a) * f(b) >= 0) {
         cout << "Invalid interval: f(a) and f(b) must have opposite signs.\n";
@@ -33,12 +32,10 @@ void bisection(double a, double b, double tolerance) {
         else
             a = c;
         
-        cout << fixed << setprecision(6);
         cout <<"a = " <<a <<"   b = " <<b << "  c = " << c << endl;
 
     }
 
-    cout << fixed << setprecision(6);
     cout << "Approximate root: " << c << endl;
     cout << "Iterations: " << iteration << endl;
 }
@@ -48,6 +45,8 @@ int main() {
     double b = 1;             
     double tolerance = 1e-6;
 
+    cout << fixed << setprecision(6);
+    
     bisection(a, b, tolerance);
 
     return 0;

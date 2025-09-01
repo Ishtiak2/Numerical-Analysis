@@ -38,9 +38,9 @@ int bisection(double a, double b, double tolerance) {
         
     }
 
-
     cout << "Approximate root in traditional bisection: " << c <<"  ";
     cout << "iterations: " << iteration << endl;
+    
     return iteration;
 }
 
@@ -76,7 +76,6 @@ int regularFalsePosition(double a, double b, double tolerance) {
         
     
     }
-
 
     cout << "Approximate root in False Position Method: " << c <<"  iterations: " << iteration << endl;
     return iteration;

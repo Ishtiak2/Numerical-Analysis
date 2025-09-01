@@ -2,7 +2,7 @@
 a.out
 *.out
 *.o
-
+try/
 # If you name your program (like 'main', 'program', etc.), ignore them:
 program
 main

@@ -35,11 +35,9 @@ void regularFalsePosition(double a, double b, double tolerance, int maxIteration
         else
             a = c;
         
-        cout << fixed << setprecision(6);
         cout <<"a = " <<a <<" b = " <<b << " c = " << c << endl;
     }
 
-    cout << fixed << setprecision(6);
     cout << "Approximate root: " << c << endl;
     cout << "Iterations: " << iteration << endl;
 }
@@ -48,6 +46,8 @@ int main() {
     double a = 3;
     double b = 7;
     double tolerance = 1e-4;
+
+    cout << fixed << setprecision(6);
 
     regularFalsePosition(a, b, tolerance);
 

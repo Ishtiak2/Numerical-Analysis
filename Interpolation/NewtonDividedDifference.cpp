@@ -4,6 +4,7 @@ using namespace std;
 
 double newtonInterpolation(int n, double x[], double y[], double p) {
     // Divided difference table
+    
     double dd[100][100];  // adjust size if needed
 
     // First column is just y values
@@ -38,6 +39,7 @@ double newtonInterpolation(int n, double x[], double y[], double p) {
     
     double result = dd[0][0];
     double term = 1.0;
+    
     for (int j = 1; j < n; j++) {
         term *= (p - x[j-1]);
         result += dd[0][j] * term;

@@ -3,8 +3,7 @@
 #include <cmath>
 using namespace std;
 
-const int MAXN = 1000;  // Safety limit
-double x[MAXN + 1];
+double x[1000];
 
 double func(double y) {
     return 1.0 / y;  // Example: f(x) = 1/x

@@ -14,28 +14,29 @@ void gaussElimination(int n, int m) {
 
         // Find pivot row
         int pivot = prow;
-        for (int i = prow + 1; i <= n; i++) {
-            if (fabs(arr[i][pcol]) > fabs(arr[pivot][pcol])) {
-                pivot = i;
-            }
-        }
 
-        // If pivot is zero, move to next column
+        // If pivot is zero, find the non-zero column and swap it
         if (fabs(arr[pivot][pcol]) < 1e-9) {
-            pcol++;
-            continue;
-        }
+            
+            for (int i = prow + 1; i <= n; i++) {
+                
+                if (fabs(arr[i][pcol]) > fabs(arr[pivot][pcol])) {
+                    pivot = i;
+                }
+            }
 
-        // Swap pivot row to current position
-        if (pivot != prow) {
+            // Swap pivot row to current position
             for (int j = 1; j <= m + 1; j++) {
                 swap(arr[pivot][j], arr[prow][j]);
             }
+
         }
 
         // Eliminate rows below pivot
         for (int i = prow + 1; i <= n; i++) {
+            
             double factor = arr[i][pcol] / arr[prow][pcol];
+            
             for (int j = pcol; j <= m + 1; j++) {
                 arr[i][j] -= factor * arr[prow][j];
             }
@@ -43,6 +44,7 @@ void gaussElimination(int n, int m) {
 
         prow++;
         pcol++;
+    
     }
 
     // Back substitution
